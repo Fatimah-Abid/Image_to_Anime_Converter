@@ -5,8 +5,9 @@ import torch
 import io
 
 # Load the pre-trained model
-model = torch.hub.load("bryandlee/animegan2-pytorch:main", "generator", pretrained="face_paint_512_v2")
-face2paint = torch.hub.load("bryandlee/animegan2-pytorch:main", "face2paint", size=512)
+model = torch.hub.load("bryandlee/animegan2-pytorch:main", "generator", pretrained="face_paint_512_v2", trust_repo=True)
+face2paint = torch.hub.load("bryandlee/animegan2-pytorch:main", "face2paint", size=512, trust_repo=True)
+
 
 def main():
     st.title("AnimeGAN2 Face Paint App")
